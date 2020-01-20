@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>A Diary</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+      <h1>Welcome!</h1>
+      <img th:src="@{/images/promotional-diary-500x500.jpg}"/>
+
+      <form method="POST" th:object="${rec}">
+
+          <div>
+
+              <h3>Write something:</h3>
+              <!--<input type="text" th:field="*{records}"/>-->
+              <textarea th:field="*{records}"/>
+
+          <br/>
+
+              <button>Submit your thoughts</button>
+          </div>
+      </form>
+
+
+</body>
+</html>
