@@ -6,14 +6,14 @@
 <head>
 
     <title>Second page here...</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
 </head>
 <body>
 
      <img th:src="@{images/81jIHUkLWWL._AC_SX466_.jpg}"/>
-     <!--<h2 th:text="${try}">placeholder message</h2>-->
 
      <h3>Records:</h3>
-     <div th:each="records : ${records}">
+     <div class="boxed" th:each="records : ${records}">
          <h4>Date of persistence: <span th:text="${records.date}">DATE</span></h4>
          <h4>Your record:</h4>
          <span th:text="${records.records}">RECORD</span><br/>
@@ -21,6 +21,7 @@
 
      </div><br/>
 
-     <h3 th:text="${re}">placeholder message</h3>
+     <!--<div class="boxed"> this text should be boxed </div>-->
+
 </body>
 </html>
